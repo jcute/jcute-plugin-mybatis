@@ -1,5 +1,6 @@
 package com.jcute.plugin.mybatis;
 
+import org.apache.ibatis.cache.TransactionalCacheManager;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.SqlSession;
@@ -7,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import org.apache.ibatis.transaction.TransactionFactory;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.jcute.core.annotation.Configuration;
 
@@ -15,6 +17,8 @@ import com.jcute.core.annotation.Configuration;
 public class TestMyBatisPlugin{
 
 	public static void main(String[] args){
+		
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 		// JCuteApplication.run(TestMyBatisPlugin.class);
 		PooledDataSource dataSource = new PooledDataSource("com.mysql.jdbc.Driver","jdbc:mysql://localhost:3306/test","root","123456");
 		TransactionFactory transactionFactory = new JdbcTransactionFactory();

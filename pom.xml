@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.jcute</groupId>
 	<artifactId>jcute-plugin-mybatis</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<properties>
 		<project.build.version>1.6</project.build.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>com.github.jcute</groupId>
 			<artifactId>jcute-core</artifactId>
-			<version>0.0.4</version>
+			<version>0.0.5</version>
 		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>
